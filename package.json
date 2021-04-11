@@ -1,0 +1,19 @@
+{
+  "name": "wbdv-sp21-01-rgrant-server-node",
+  "version": "1.0.0",
+  "description": "Node Server for wbdv-sp21",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/rileyhgrant/wbdv-sp21-01-rgrant-server-node.git"
+  },
+  "author": "Riley Grant",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rileyhgrant/wbdv-sp21-01-rgrant-server-node/issues"
+  },
+  "homepage": "https://github.com/rileyhgrant/wbdv-sp21-01-rgrant-server-node#readme"
+}

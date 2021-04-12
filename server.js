@@ -23,3 +23,4 @@ require("./controllers/quizzes-controller")(app);
 require("./controllers/questions-controller")(app);
 
 app.listen(3000);
+app.listen(process.env.PORT || 3001)

@@ -1,6 +1,12 @@
 const express = require("express");
 const app = express();
 
+const mongoose = require("mongoose");
+mongoose.connect("mongodb://localhost:27017/whiteboard-01", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header(
@@ -23,4 +29,4 @@ require("./controllers/quizzes-controller")(app);
 require("./controllers/questions-controller")(app);
 
 app.listen(3000);
-app.listen(process.env.PORT || 3001)
+app.listen(process.env.PORT || 3001);

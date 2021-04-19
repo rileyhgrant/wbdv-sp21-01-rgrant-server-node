@@ -1,15 +1,22 @@
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+// TODO: REMOVE ME
+const uri = process.env.MONGODB_URI;
 
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost:27017/whiteboard-01", {
+// mongoose.connect("mongodb://localhost:27017/whiteboard-01", {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+// });
+mongoose.connect(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
 
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header(
